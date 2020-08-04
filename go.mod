@@ -11,6 +11,7 @@ require (
 	github.com/chzyer/logex v1.1.10 // indirect
 	github.com/chzyer/readline v0.0.0-20171208011716-f6d7a1f6fbf3 // indirect
 	github.com/chzyer/test v0.0.0-20180213035817-a1ea475d72b1 // indirect
+	github.com/colinrgodsey/serial v0.0.0-20200722230255-f7ada0eda9cb
 	github.com/cosiner/argv v0.0.1 // indirect
 	github.com/fatih/color v1.7.0 // indirect
 	github.com/fatih/structs v1.1.0
@@ -30,7 +31,6 @@ require (
 	github.com/spf13/cast v1.3.0
 	github.com/spf13/cobra v0.0.5
 	github.com/spf13/pflag v1.0.5 // indirect
-	github.com/tarm/serial v0.0.0-20180830185346-98f6abe2eb07
 	github.com/ugorji/go v1.1.7 // indirect
 	github.com/ugorji/go/codec v1.1.7
 	go.starlark.net v0.0.0-20190919145610-979af19b165c // indirect

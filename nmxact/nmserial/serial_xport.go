@@ -29,10 +29,10 @@ import (
 	"sync"
 	"time"
 
+	"github.com/colinrgodsey/serial"
 	"github.com/joaojeronimo/go-crc16"
 	"github.com/runtimeco/go-coap"
 	log "github.com/sirupsen/logrus"
-	"github.com/tarm/serial"
 
 	"mynewt.apache.org/newt/util"
 	"mynewt.apache.org/newtmgr/nmxact/sesn"
@@ -273,10 +273,8 @@ func (sx *SerialXport) Tx(bytes []byte) error {
 		if written == 0 {
 			sx.txRaw([]byte{6, 9})
 		} else {
-			/* slower platforms take some time to process each segment
-			 * and have very small receive buffers.  Give them a bit of
-			 * time here */
-			time.Sleep(20 * time.Millisecond)
+			/* Note: this section had a 20ms delay, not
+			 * necessary for nRF9160 Feather*/
 			sx.txRaw([]byte{4, 20})
 		}
 
